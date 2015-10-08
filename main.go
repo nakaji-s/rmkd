@@ -235,7 +235,7 @@ func main() {
 	})
 
 	http.HandleFunc("/readfile", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, string(b))
+		fmt.Fprint(w, string(b))
 	})
 
 	http.HandleFunc("/writefile", func(w http.ResponseWriter, r *http.Request) {
